@@ -21,7 +21,7 @@ int main(int Argc, char **Argv) {
   // 传入程序的参数为str类型，因为需要转换为需要int类型，
   // atoi为“ASCII to integer”
   // printf("  li a0, %d\n", atoi(Argv[1]));
-  printf("  addi a0, x0, %d\n", atoi(Argv[1]));
+  printf("  movq $%d, %%rax\n", atoi(Argv[1]));
   // ret为jalr x0, x1, 0别名指令，用于返回子程序
   printf("  ret\n");
 
