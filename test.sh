@@ -6,9 +6,9 @@ assert() {
 
   ./rvcc "$input" > tmp.s || exit
 
-  gcc -o tmp tmp.s
+  riscv64-linux-gnu-gcc -o tmp -static tmp.s
 
-  ./tmp
+  qemu-riscv64 -L $RISCV/sysroot tmp
 
   actual="$?"
 
