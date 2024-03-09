@@ -36,8 +36,8 @@ assert() {
 
 # assert 期待值 输入值
 # [1] 返回指定数值
-assert 0 0
-assert 42 42
+assert 2 1-2+3
+assert 4 7-4+1
 
 # 如果运行正常未提前退出，程序将显示OK
 echo OK
